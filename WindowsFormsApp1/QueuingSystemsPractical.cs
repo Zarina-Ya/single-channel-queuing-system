@@ -20,8 +20,6 @@ namespace WindowsFormsApp1
 
         private static void SignAxis(string x, string y, Chart chart)
         {
-
-
             Axis ax = new Axis();
             ax.Title = x;
             chart.ChartAreas[0].AxisX = ax;
@@ -32,11 +30,12 @@ namespace WindowsFormsApp1
         }
 
 
-        public static void InitPointToPlotAverageNumSubscribersAsync(int countWindow,Chart chartTimemess, Chart countMess)
+        public static void InitPointToPlotAverageNumSubscribersAsync(int countWindow,Chart chartTimemess, Chart countMess, Chart generalCount, Chart generalSync)
         {
             var l = 0.0f;
             MinMaxPlot(chartTimemess);
             MinMaxPlot(countMess);
+            MinMaxPlot(generalCount);
             while (l < lkr)
             {
                 var queue = new List<double>();
@@ -86,17 +85,24 @@ namespace WindowsFormsApp1
                     countmess += item;
 
                 chartTimemess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
-                countMess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
 
+
+                generalSync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
+
+
+                countMess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
+                generalCount.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
+                generalCount.Series[1].LegendText = "Sync";
                 l += 0.1f;
             }
         }
 
-        public static void var2(int countWindow, Chart chartTimemess, Chart countMess)
+        public static void var2(int countWindow, Chart chartTimemess, Chart countMess, Chart generalCount, Chart generalASync)
         {
             var l = 0.0f;
             MinMaxPlot(chartTimemess);
             MinMaxPlot(countMess);
+            MinMaxPlot(generalCount);
             _rand = new Random();
             while (l < lkr)
             {
@@ -147,8 +153,10 @@ namespace WindowsFormsApp1
                     countmess += item;
 
                 chartTimemess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
+                generalASync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
                 countMess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
-
+                generalCount.Series[2].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
+                generalCount.Series[2].LegendText = "Async";
                 l += 0.1f;
             }
         }

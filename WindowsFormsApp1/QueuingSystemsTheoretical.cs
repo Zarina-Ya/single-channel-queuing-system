@@ -10,16 +10,19 @@ namespace WindowsFormsApp1
     public static class QueuingSystemsTheoretical
     {
         private static double lkr = 1.0f;
-        public static void InitPointToPlotAverageNumSubscribers(Chart chart)
+        public static void InitPointToPlotAverageNumSubscribers(Chart chart, Chart general)
         {
             SignAxis("l", "N(l)", chart);
             MinMaxPlot(chart);
+            MinMaxPlot(general);
             double l = 0.0f;
             while( l < lkr)
             {
                 chart.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), AverageNumSubscribers(l));
+                general.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), AverageNumSubscribers(l));
                 l += 0.1f;
             }
+            general.Series[0].LegendText = "Theoretical";
         }
         private static void MinMaxPlot(Chart chart)
         {
@@ -41,7 +44,7 @@ namespace WindowsFormsApp1
         }
 
 
-        public static void InitPointToPlotAverageDelay(Chart chart, bool isAsync)
+        public static void InitPointToPlotAverageDelay(Chart chart, bool isAsync, Chart generalSync, Chart generalAsync)
         {
             SignAxis("l", "d(l)", chart);
             MinMaxPlot( chart);
@@ -50,7 +53,14 @@ namespace WindowsFormsApp1
             while (l < lkr)
             {
                 var Nl = AverageNumSubscribers(l)/l;
-                chart.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), (isAsync ? Nl : Nl + 0.5f));
+                var res = (isAsync ? Nl : Nl + 0.5f);
+                chart.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                if (isAsync)
+                {
+                    generalAsync.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                }
+                else
+                    generalSync.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
                 l += 0.1f;
             }
         }

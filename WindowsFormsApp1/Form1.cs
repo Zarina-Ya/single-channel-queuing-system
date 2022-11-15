@@ -16,11 +16,11 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            QueuingSystemsTheoretical.InitPointToPlotAverageNumSubscribers(AverageNumberPlot);
-            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelayAsync, true);
-            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelaySync, false) ;
-            QueuingSystemsPractical.InitPointToPlotAverageNumSubscribersAsync(10000, counttimes, countMes);
-            QueuingSystemsPractical.var2(10000, var2Times, var2Count);
+            QueuingSystemsTheoretical.InitPointToPlotAverageNumSubscribers(AverageNumberPlot, GeneralPlotCount);
+            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelayAsync, true, GeneralDelaySync, generalAsync);
+            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelaySync, false, GeneralDelaySync, generalAsync) ;
+            QueuingSystemsPractical.InitPointToPlotAverageNumSubscribersAsync(10000, counttimes, countMes, GeneralPlotCount, GeneralDelaySync);
+            QueuingSystemsPractical.var2(10000, var2Times, var2Count, GeneralPlotCount, generalAsync);
         }
 
         private void AverageDelayAsync_Click(object sender, EventArgs e)
