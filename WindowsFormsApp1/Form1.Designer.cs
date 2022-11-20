@@ -35,327 +35,245 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.AverageNumberPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.AverageDelayAsync = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.AverageDelaySync = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.counttimes = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.countMes = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.var2Times = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.var2Count = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.GeneralPlotCount = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.GeneralDelaySync = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.generalAsync = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.AverageNumberPlot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AverageDelayAsync)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AverageDelaySync)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.counttimes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countMes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.var2Times)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.var2Count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralPlotCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralDelaySync)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalAsync)).BeginInit();
+            this.NumSubSyncPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.NumSubAsyncPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.GeneralPlotNumSub = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.NumSubTheorPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.GeneralHistory = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.HistoryAsync = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.HistorySync = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubSyncPlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubAsyncPlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralPlotNumSub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubTheorPlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryAsync)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistorySync)).BeginInit();
             this.SuspendLayout();
             // 
-            // AverageNumberPlot
+            // NumSubSyncPlot
             // 
             chartArea1.Name = "ChartArea1";
-            this.AverageNumberPlot.ChartAreas.Add(chartArea1);
-            this.AverageNumberPlot.Location = new System.Drawing.Point(961, 9);
-            this.AverageNumberPlot.Name = "AverageNumberPlot";
-            this.AverageNumberPlot.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.BorderWidth = 5;
+            this.NumSubSyncPlot.ChartAreas.Add(chartArea1);
+            this.NumSubSyncPlot.Location = new System.Drawing.Point(-1, 241);
+            this.NumSubSyncPlot.Name = "NumSubSyncPlot";
+            this.NumSubSyncPlot.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Name = "Series1";
-            this.AverageNumberPlot.Series.Add(series1);
-            this.AverageNumberPlot.Size = new System.Drawing.Size(305, 194);
-            this.AverageNumberPlot.TabIndex = 0;
-            this.AverageNumberPlot.Text = "chart1";
-            title1.BorderWidth = 4;
+            this.NumSubSyncPlot.Series.Add(series1);
+            this.NumSubSyncPlot.Size = new System.Drawing.Size(240, 179);
+            this.NumSubSyncPlot.TabIndex = 3;
+            this.NumSubSyncPlot.Text = "chart1";
             title1.Name = "Title1";
-            title1.Text = " Среднее число абонентов Теоритические значения";
-            this.AverageNumberPlot.Titles.Add(title1);
+            title1.Text = " Среднее число абонентов Практическое значения Синхронная";
+            this.NumSubSyncPlot.Titles.Add(title1);
             // 
-            // AverageDelayAsync
+            // NumSubAsyncPlot
             // 
             chartArea2.Name = "ChartArea1";
-            this.AverageDelayAsync.ChartAreas.Add(chartArea2);
-            this.AverageDelayAsync.Location = new System.Drawing.Point(677, 9);
-            this.AverageDelayAsync.Name = "AverageDelayAsync";
-            series2.BorderWidth = 5;
+            this.NumSubAsyncPlot.ChartAreas.Add(chartArea2);
+            this.NumSubAsyncPlot.Location = new System.Drawing.Point(-1, 426);
+            this.NumSubAsyncPlot.Name = "NumSubAsyncPlot";
+            this.NumSubAsyncPlot.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Name = "Series1";
-            this.AverageDelayAsync.Series.Add(series2);
-            this.AverageDelayAsync.Size = new System.Drawing.Size(278, 202);
-            this.AverageDelayAsync.TabIndex = 1;
-            this.AverageDelayAsync.Text = "chart1";
-            title2.Name = " ";
-            title2.Text = " Средняя задержка асинхронная Теоритические значения";
-            this.AverageDelayAsync.Titles.Add(title2);
-            this.AverageDelayAsync.Click += new System.EventHandler(this.AverageDelayAsync_Click);
+            this.NumSubAsyncPlot.Series.Add(series2);
+            this.NumSubAsyncPlot.Size = new System.Drawing.Size(240, 190);
+            this.NumSubAsyncPlot.TabIndex = 6;
+            this.NumSubAsyncPlot.Text = "chart1";
+            title2.Name = "Title1";
+            title2.Text = " Среднее число абонентов Практическое значения Асинхронная";
+            this.NumSubAsyncPlot.Titles.Add(title2);
             // 
-            // AverageDelaySync
+            // GeneralPlotNumSub
             // 
             chartArea3.Name = "ChartArea1";
-            this.AverageDelaySync.ChartAreas.Add(chartArea3);
-            this.AverageDelaySync.Location = new System.Drawing.Point(677, 217);
-            this.AverageDelaySync.Name = "AverageDelaySync";
-            this.AverageDelaySync.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series3.BorderWidth = 5;
+            this.GeneralPlotNumSub.ChartAreas.Add(chartArea3);
+            legend1.Name = "Legend1";
+            this.GeneralPlotNumSub.Legends.Add(legend1);
+            this.GeneralPlotNumSub.Location = new System.Drawing.Point(245, 19);
+            this.GeneralPlotNumSub.Name = "GeneralPlotNumSub";
+            this.GeneralPlotNumSub.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.LabelBorderWidth = 5;
+            series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.AverageDelaySync.Series.Add(series3);
-            this.AverageDelaySync.Size = new System.Drawing.Size(299, 195);
-            this.AverageDelaySync.TabIndex = 2;
-            this.AverageDelaySync.Text = "chart1";
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series2";
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Series3";
+            this.GeneralPlotNumSub.Series.Add(series3);
+            this.GeneralPlotNumSub.Series.Add(series4);
+            this.GeneralPlotNumSub.Series.Add(series5);
+            this.GeneralPlotNumSub.Size = new System.Drawing.Size(769, 623);
+            this.GeneralPlotNumSub.TabIndex = 7;
+            this.GeneralPlotNumSub.Text = "chart1";
             title3.Name = "Title1";
-            title3.Text = " Средняя задержка сихронная Теоритические значения";
-            this.AverageDelaySync.Titles.Add(title3);
+            title3.Text = " Среднее число абонентов ";
+            this.GeneralPlotNumSub.Titles.Add(title3);
             // 
-            // counttimes
+            // NumSubTheorPlot
             // 
             chartArea4.Name = "ChartArea1";
-            this.counttimes.ChartAreas.Add(chartArea4);
-            this.counttimes.Location = new System.Drawing.Point(12, 209);
-            this.counttimes.Name = "counttimes";
-            this.counttimes.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series4.BorderWidth = 5;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Name = "Series1";
-            this.counttimes.Series.Add(series4);
-            this.counttimes.Size = new System.Drawing.Size(294, 179);
-            this.counttimes.TabIndex = 3;
-            this.counttimes.Text = "chart1";
-            title4.Name = "Title1";
-            title4.Text = " Среднее число абонентов Практическое значения Синхронная";
-            this.counttimes.Titles.Add(title4);
-            // 
-            // countMes
-            // 
-            chartArea5.Name = "ChartArea1";
-            this.countMes.ChartAreas.Add(chartArea5);
-            this.countMes.Location = new System.Drawing.Point(312, 217);
-            this.countMes.Name = "countMes";
-            this.countMes.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series5.BorderWidth = 5;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Name = "Series1";
-            this.countMes.Series.Add(series5);
-            this.countMes.Size = new System.Drawing.Size(359, 195);
-            this.countMes.TabIndex = 4;
-            this.countMes.Text = "chart1";
-            title5.Name = "Title1";
-            title5.Text = " Средняя задержка синхронная Практические значения";
-            this.countMes.Titles.Add(title5);
-            // 
-            // var2Times
-            // 
-            chartArea6.Name = "ChartArea1";
-            this.var2Times.ChartAreas.Add(chartArea6);
-            this.var2Times.Location = new System.Drawing.Point(349, 9);
-            this.var2Times.Name = "var2Times";
-            series6.BorderWidth = 5;
+            this.NumSubTheorPlot.ChartAreas.Add(chartArea4);
+            this.NumSubTheorPlot.Location = new System.Drawing.Point(-1, 45);
+            this.NumSubTheorPlot.Name = "NumSubTheorPlot";
+            this.NumSubTheorPlot.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series6.BorderWidth = 2;
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series6.Name = "Series1";
-            this.var2Times.Series.Add(series6);
-            this.var2Times.Size = new System.Drawing.Size(322, 202);
-            this.var2Times.TabIndex = 5;
-            this.var2Times.Text = "chart1";
-            title6.Name = "Title1";
-            title6.Text = " Средняя задержка асинхронная Практические значения";
-            this.var2Times.Titles.Add(title6);
+            this.NumSubTheorPlot.Series.Add(series6);
+            this.NumSubTheorPlot.Size = new System.Drawing.Size(240, 190);
+            this.NumSubTheorPlot.TabIndex = 8;
+            this.NumSubTheorPlot.Text = "chart1";
+            title4.Name = "Title1";
+            title4.Text = "Теоритические заначения";
+            this.NumSubTheorPlot.Titles.Add(title4);
             // 
-            // var2Count
+            // GeneralHistory
             // 
-            chartArea7.Name = "ChartArea1";
-            this.var2Count.ChartAreas.Add(chartArea7);
-            this.var2Count.Location = new System.Drawing.Point(12, 394);
-            this.var2Count.Name = "var2Count";
-            this.var2Count.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series7.BorderWidth = 5;
+            chartArea5.Name = "ChartArea1";
+            this.GeneralHistory.ChartAreas.Add(chartArea5);
+            legend2.Name = "Legend1";
+            this.GeneralHistory.Legends.Add(legend2);
+            this.GeneralHistory.Location = new System.Drawing.Point(1020, 1);
+            this.GeneralHistory.Name = "GeneralHistory";
+            this.GeneralHistory.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series7.BorderWidth = 2;
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Legend = "Legend1";
             series7.Name = "Series1";
-            this.var2Count.Series.Add(series7);
-            this.var2Count.Size = new System.Drawing.Size(294, 199);
-            this.var2Count.TabIndex = 6;
-            this.var2Count.Text = "chart1";
-            title7.Name = "Title1";
-            title7.Text = " Среднее число абонентов Практическое значения Асинхронная";
-            this.var2Count.Titles.Add(title7);
-            // 
-            // GeneralPlotCount
-            // 
-            chartArea8.Name = "ChartArea1";
-            this.GeneralPlotCount.ChartAreas.Add(chartArea8);
-            legend1.Name = "Legend1";
-            this.GeneralPlotCount.Legends.Add(legend1);
-            this.GeneralPlotCount.Location = new System.Drawing.Point(12, 24);
-            this.GeneralPlotCount.Name = "GeneralPlotCount";
-            this.GeneralPlotCount.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series8.BorderWidth = 5;
+            series8.BorderWidth = 2;
             series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series8.Legend = "Legend1";
-            series8.Name = "Series1";
+            series8.Name = "Series2";
+            this.GeneralHistory.Series.Add(series7);
+            this.GeneralHistory.Series.Add(series8);
+            this.GeneralHistory.Size = new System.Drawing.Size(548, 267);
+            this.GeneralHistory.TabIndex = 11;
+            this.GeneralHistory.Text = "chart1";
+            title5.Name = "Title1";
+            title5.Text = "Средняя задержкa";
+            this.GeneralHistory.Titles.Add(title5);
+            // 
+            // HistoryAsync
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.HistoryAsync.ChartAreas.Add(chartArea6);
+            legend3.Name = "HistoryAsync";
+            legend3.Title = "HistoryAsync";
+            this.HistoryAsync.Legends.Add(legend3);
+            this.HistoryAsync.Location = new System.Drawing.Point(1020, 274);
+            this.HistoryAsync.Name = "HistoryAsync";
             series9.BorderWidth = 2;
             series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.Name = "Series2";
-            series10.BorderWidth = 3;
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Legend = "HistoryAsync";
+            series9.Name = "Series1";
+            series10.BorderWidth = 2;
             series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Legend = "Legend1";
-            series10.Name = "Series3";
-            this.GeneralPlotCount.Series.Add(series8);
-            this.GeneralPlotCount.Series.Add(series9);
-            this.GeneralPlotCount.Series.Add(series10);
-            this.GeneralPlotCount.Size = new System.Drawing.Size(331, 179);
-            this.GeneralPlotCount.TabIndex = 7;
-            this.GeneralPlotCount.Text = "chart1";
-            title8.Name = "Title1";
-            title8.Text = " Среднее число абонентов ";
-            this.GeneralPlotCount.Titles.Add(title8);
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Legend = "HistoryAsync";
+            series10.Name = "Series2";
+            this.HistoryAsync.Series.Add(series9);
+            this.HistoryAsync.Series.Add(series10);
+            this.HistoryAsync.Size = new System.Drawing.Size(455, 229);
+            this.HistoryAsync.TabIndex = 13;
+            this.HistoryAsync.Text = "chart2";
             // 
-            // GeneralDelaySync
+            // HistorySync
             // 
-            chartArea9.Name = "ChartArea1";
-            this.GeneralDelaySync.ChartAreas.Add(chartArea9);
-            legend2.Name = "Legend1";
-            this.GeneralDelaySync.Legends.Add(legend2);
-            this.GeneralDelaySync.Location = new System.Drawing.Point(312, 418);
-            this.GeneralDelaySync.Name = "GeneralDelaySync";
-            this.GeneralDelaySync.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series11.BorderWidth = 5;
+            chartArea7.Name = "ChartArea1";
+            this.HistorySync.ChartAreas.Add(chartArea7);
+            legend4.Name = "HistoryAsync";
+            legend4.Title = "HistorySync";
+            this.HistorySync.Legends.Add(legend4);
+            this.HistorySync.Location = new System.Drawing.Point(1020, 509);
+            this.HistorySync.Name = "HistorySync";
+            series11.BorderWidth = 2;
             series11.ChartArea = "ChartArea1";
             series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.LabelBorderWidth = 5;
-            series11.Legend = "Legend1";
+            series11.Legend = "HistoryAsync";
             series11.Name = "Series1";
             series12.BorderWidth = 2;
             series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Legend = "Legend1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Legend = "HistoryAsync";
             series12.Name = "Series2";
-            this.GeneralDelaySync.Series.Add(series11);
-            this.GeneralDelaySync.Series.Add(series12);
-            this.GeneralDelaySync.Size = new System.Drawing.Size(636, 195);
-            this.GeneralDelaySync.TabIndex = 8;
-            this.GeneralDelaySync.Text = "chart1";
-            title9.Name = "Title1";
-            title9.Text = " Средняя задержка сихронная ";
-            this.GeneralDelaySync.Titles.Add(title9);
-            // 
-            // generalAsync
-            // 
-            chartArea10.Name = "ChartArea1";
-            this.generalAsync.ChartAreas.Add(chartArea10);
-            legend3.Name = "Legend1";
-            this.generalAsync.Legends.Add(legend3);
-            this.generalAsync.Location = new System.Drawing.Point(982, 217);
-            this.generalAsync.Name = "generalAsync";
-            this.generalAsync.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series13.BorderWidth = 5;
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.LabelBorderWidth = 5;
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            series14.BorderWidth = 2;
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series14.Legend = "Legend1";
-            series14.Name = "Series2";
-            this.generalAsync.Series.Add(series13);
-            this.generalAsync.Series.Add(series14);
-            this.generalAsync.Size = new System.Drawing.Size(293, 219);
-            this.generalAsync.TabIndex = 9;
-            this.generalAsync.Text = "chart1";
-            title10.Name = "Title1";
-            title10.Text = " Средняя задержка Async";
-            this.generalAsync.Titles.Add(title10);
+            this.HistorySync.Series.Add(series11);
+            this.HistorySync.Series.Add(series12);
+            this.HistorySync.Size = new System.Drawing.Size(455, 229);
+            this.HistorySync.TabIndex = 14;
+            this.HistorySync.Text = "chart2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 654);
-            this.Controls.Add(this.generalAsync);
-            this.Controls.Add(this.GeneralDelaySync);
-            this.Controls.Add(this.GeneralPlotCount);
-            this.Controls.Add(this.var2Count);
-            this.Controls.Add(this.var2Times);
-            this.Controls.Add(this.countMes);
-            this.Controls.Add(this.counttimes);
-            this.Controls.Add(this.AverageDelaySync);
-            this.Controls.Add(this.AverageDelayAsync);
-            this.Controls.Add(this.AverageNumberPlot);
+            this.ClientSize = new System.Drawing.Size(1592, 977);
+            this.Controls.Add(this.HistorySync);
+            this.Controls.Add(this.HistoryAsync);
+            this.Controls.Add(this.GeneralHistory);
+            this.Controls.Add(this.NumSubTheorPlot);
+            this.Controls.Add(this.GeneralPlotNumSub);
+            this.Controls.Add(this.NumSubAsyncPlot);
+            this.Controls.Add(this.NumSubSyncPlot);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.AverageNumberPlot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AverageDelayAsync)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AverageDelaySync)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.counttimes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countMes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.var2Times)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.var2Count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralPlotCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GeneralDelaySync)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalAsync)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubSyncPlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubAsyncPlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralPlotNumSub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumSubTheorPlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeneralHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryAsync)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistorySync)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataVisualization.Charting.Chart AverageNumberPlot;
-        private System.Windows.Forms.DataVisualization.Charting.Chart AverageDelayAsync;
-        private System.Windows.Forms.DataVisualization.Charting.Chart AverageDelaySync;
-        private System.Windows.Forms.DataVisualization.Charting.Chart counttimes;
-        private System.Windows.Forms.DataVisualization.Charting.Chart countMes;
-        private System.Windows.Forms.DataVisualization.Charting.Chart var2Times;
-        private System.Windows.Forms.DataVisualization.Charting.Chart var2Count;
-        private System.Windows.Forms.DataVisualization.Charting.Chart GeneralPlotCount;
-        private System.Windows.Forms.DataVisualization.Charting.Chart GeneralDelaySync;
-        private System.Windows.Forms.DataVisualization.Charting.Chart generalAsync;
+        private System.Windows.Forms.DataVisualization.Charting.Chart NumSubSyncPlot;
+        private System.Windows.Forms.DataVisualization.Charting.Chart NumSubAsyncPlot;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GeneralPlotNumSub;
+        private System.Windows.Forms.DataVisualization.Charting.Chart NumSubTheorPlot;
+        private System.Windows.Forms.DataVisualization.Charting.Chart GeneralHistory;
+        protected System.Windows.Forms.DataVisualization.Charting.Chart HistoryAsync;
+        protected System.Windows.Forms.DataVisualization.Charting.Chart HistorySync;
     }
 }
 

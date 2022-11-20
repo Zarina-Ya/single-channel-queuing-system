@@ -29,135 +29,156 @@ namespace WindowsFormsApp1
 
         }
 
+        private static void SendFirstMessage(QueueMessageTime queueMessage, HistoryMessageTimes history )
+        {
+            if (queueMessage.Count > 0)
+            {
+                history.AddMessageToHistory(queueMessage.GetFirstMessage() + 1.0f);
+                queueMessage.RemoveFirst();
+            }
 
-        public static void InitPointToPlotAverageNumSubscribersAsync(int countWindow,Chart chartTimemess, Chart countMess, Chart generalCount, Chart generalSync)
+            queueMessage.AddWaiting();
+        }
+
+        private static void SendRemainingMessages(QueueMessageTime queueMessage,
+            HistoryMessageTimes history,
+            List<double> countMessageinWin)
+        {
+            while (queueMessage.Count > 0)
+            {
+                countMessageinWin.Add(queueMessage.Count);
+                history.AddMessageToHistory(queueMessage.GetFirstMessage() + 1.0f);
+                queueMessage.RemoveFirst();
+                queueMessage.AddWaiting();
+            }
+        }
+
+
+        private static void InitPlotsForAsyncModulation(
+            double l,
+            double historyArithmeticMean,
+            double countMessageArithmeticMean, 
+            Chart histories,
+            Chart generalHistiries,
+            Chart countMessagePlot, 
+            Chart generalCountMessage)
+        {
+            histories.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), historyArithmeticMean);
+            histories.Series[0].LegendText = "ASync";
+            generalHistiries.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), historyArithmeticMean);
+            generalHistiries.Series[0].LegendText = "ASync";
+
+            countMessagePlot.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countMessageArithmeticMean);
+
+            generalCountMessage.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countMessageArithmeticMean);
+            generalCountMessage.Series[1].LegendText = "Async";
+        }
+
+        private static void InitPlotsForSyncModulation(
+            double l,
+            double historyArithmeticMean,
+            double countMessageArithmeticMean,
+            Chart histories,
+            Chart generalHistiries,
+            Chart countMessagePlot,
+            Chart generalCountMessage)
+        {
+
+            histories.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), historyArithmeticMean);
+            histories.Series[0].LegendText = "Sync";
+            generalHistiries.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), historyArithmeticMean);
+            generalHistiries.Series[1].LegendText = "Sync";
+            countMessagePlot.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countMessageArithmeticMean);
+            generalCountMessage.Series[2].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countMessageArithmeticMean);
+            generalCountMessage.Series[2].LegendText = "Sync";
+        }
+
+
+        public static void InitPointToPlotAverageNumSubscribersAsync(
+            int countWindow,
+            Chart historiesPlot, 
+            Chart countMessPlot, 
+            Chart generalHistories, 
+            Chart generalCountMess)
         {
             var l = 0.0f;
-            MinMaxPlot(chartTimemess);
-            MinMaxPlot(countMess);
-            MinMaxPlot(generalCount);
+            MinMaxPlot(historiesPlot);
+            MinMaxPlot(countMessPlot);
+            MinMaxPlot(generalCountMess);
+            MinMaxPlot(generalHistories);
+            SignAxis("l", "N(l)", countMessPlot);
             while (l < lkr)
             {
-                var queue = new List<double>();
-                var timeMessage = new List<double>();
+             
+                var queueMessage = new QueueMessageTime();
+                var history = new HistoryMessageTimes();
+
                 var countMessageinWin = new List<double>();
                 var poisson = new PoissonRandom(l);
                 for (int i = 0; i < countWindow; i++)
                 {
                     var countPeople = poisson.Next();
-                    for (int j = 0; j < countPeople; j++)
-                        queue.Add(0.0f);
-                     
-                    countMessageinWin.Add(queue.Count);
+                    queueMessage.AddToQueuePeople(countPeople);/// КОЛ-ВО ЛЮДЕЙ ПРИДЕДШИХ 
 
-                    if (queue.Count > 0)
-                    {
-                        timeMessage.Add(queue.First() + 1.0f);
+                    countMessageinWin.Add(queueMessage.Count);
 
-                        queue.RemoveAt(0);
-                    }
-
-                    for (int k = 0; k < queue.Count; k++)
-                        queue[k] += 1.0f;
-
-                    if(i+ 1 == countWindow && queue.Count > 0)
-                    {
-                        while(queue.Count > 0)
-                        {
-                            countMessageinWin.Add(queue.Count);
-                            timeMessage.Add(queue.First() + 1.0f);
-
-                            queue.RemoveAt(0);
-                       
-
-                        for (int k = 0; k < queue.Count; k++)
-                            queue[k] += 1.0f;
-                        }
-                    }
+                    SendFirstMessage(queueMessage, history);
                 }
-                double countTimes = 0.0f;
-                foreach (var item in timeMessage)
-                    countTimes += item;
+                SendRemainingMessages(queueMessage, history, countMessageinWin);
 
 
                 double countmess = 0.0f;
                 foreach (var item in countMessageinWin)
                     countmess += item;
 
-                chartTimemess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
+                InitPlotsForAsyncModulation(l,history.GetArithmeticMean(), countmess/countMessageinWin.Count, historiesPlot, generalHistories, countMessPlot, generalCountMess );
 
-
-                generalSync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
-
-
-                countMess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
-                generalCount.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
-                generalCount.Series[1].LegendText = "Sync";
                 l += 0.1f;
             }
         }
 
-        public static void var2(int countWindow, Chart chartTimemess, Chart countMess, Chart generalCount, Chart generalASync)
+        public static void InitPointToPlotAverageNumSubscribersSync(
+            int countWindow, 
+            Chart histories,
+            Chart countMess,
+            Chart generalHistories, 
+            Chart generalCountMessage)
         {
             var l = 0.0f;
-            MinMaxPlot(chartTimemess);
+            MinMaxPlot(histories);
             MinMaxPlot(countMess);
-            MinMaxPlot(generalCount);
-            _rand = new Random();
+            MinMaxPlot(generalCountMessage);
+            SignAxis("l", "N(l)", countMess);
+            SignAxis("l", "N(l)", generalCountMessage);
+            SignAxis("l", "d(l)", histories);
+            SignAxis("l", "d(l)", generalHistories);
             while (l < lkr)
             {
-                var queue = new List<double>();
-                var timeMessage = new List<double>();
+                var queueMessage = new QueueMessageTime();
+                var history = new HistoryMessageTimes();
                 var countMessageinWin = new List<double>();
                 var poisson = new PoissonRandom(l);
                 for (int i = 0; i < countWindow; i++)
                 {
                     var countPeople = poisson.Next();
-                    for (int j = 0; j < countPeople; j++)
-                        queue.Add(_rand.NextDouble());
+                    queueMessage.AddToQueuePeople(countPeople, _rand);
 
-                    countMessageinWin.Add(queue.Count);
+                    countMessageinWin.Add(queueMessage.Count);
 
-                    if (queue.Count > 0)
-                    {
-                        timeMessage.Add(queue.First() + 1.0f);
+                    SendFirstMessage(queueMessage, history);
 
-                        queue.RemoveAt(0);
-                    }
-
-                    for (int k = 0; k < queue.Count; k++)
-                        queue[k] += 1.0f;
-
-                    if (i + 1 == countWindow && queue.Count > 0)
-                    {
-                        while (queue.Count > 0)
-                        {
-                            countMessageinWin.Add(queue.Count);
-                            timeMessage.Add(queue.First() + 1.0f);
-
-                            queue.RemoveAt(0);
-
-
-                            for (int k = 0; k < queue.Count; k++)
-                                queue[k] += 1.0f;
-                        }
-                    }
+             
                 }
-                double countTimes = 0.0f;
-                foreach (var item in timeMessage)
-                    countTimes += item;
+                SendRemainingMessages(queueMessage, history, countMessageinWin);
 
+         
 
                 double countmess = 0.0f;
                 foreach (var item in countMessageinWin)
                     countmess += item;
 
-                chartTimemess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
-                generalASync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countTimes / timeMessage.Count);
-                countMess.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
-                generalCount.Series[2].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), countmess / countMessageinWin.Count);
-                generalCount.Series[2].LegendText = "Async";
-                l += 0.1f;
+                InitPlotsForSyncModulation(l, history.GetArithmeticMean(), countmess/countMessageinWin.Count, histories, generalHistories, countMess, generalCountMessage);
+               l += 0.1f;
             }
         }
 

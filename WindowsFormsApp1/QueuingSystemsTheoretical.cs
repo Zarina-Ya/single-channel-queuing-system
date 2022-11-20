@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
         public static void InitPointToPlotAverageNumSubscribers(Chart chart, Chart general)
         {
             SignAxis("l", "N(l)", chart);
+            SignAxis("l", "N(l)", general);
             MinMaxPlot(chart);
             MinMaxPlot(general);
             double l = 0.0f;
@@ -44,23 +45,29 @@ namespace WindowsFormsApp1
         }
 
 
-        public static void InitPointToPlotAverageDelay(Chart chart, bool isAsync, Chart generalSync, Chart generalAsync)
+        public static void InitPointToPlotAverageDelay(/*Chart chart,*/ bool isAsync, Chart generalSync, Chart generalAsync)
         {
-            SignAxis("l", "d(l)", chart);
-            MinMaxPlot( chart);
+            SignAxis("l", "d(l)", generalSync);
+            SignAxis("l", "d(l)", generalAsync);
+            //MinMaxPlot( chart);
             double l = 0.0f;
 
             while (l < lkr)
             {
                 var Nl = AverageNumSubscribers(l)/l;
                 var res = (isAsync ? Nl : Nl + 0.5f);
-                chart.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                //chart.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
                 if (isAsync)
                 {
-                    generalAsync.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                    generalAsync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                    generalAsync.Series[1].LegendText = "AsyncTheoretical";
                 }
                 else
-                    generalSync.Series[0].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                {
+                    generalSync.Series[1].Points.AddXY(Math.Round(l, 1, MidpointRounding.AwayFromZero), res);
+                    generalSync.Series[1].LegendText = "SyncTheoretical";
+
+                }
                 l += 0.1f;
             }
         }

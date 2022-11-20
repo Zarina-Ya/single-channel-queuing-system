@@ -53,9 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoryMessageTimes.cs" />
     <Compile Include="PoissonRandom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueMessageTime.cs" />
     <Compile Include="QueuingSystemsPractical.cs" />
     <Compile Include="QueuingSystemsTheoretical.cs" />
     <EmbeddedResource Include="Form1.resx">

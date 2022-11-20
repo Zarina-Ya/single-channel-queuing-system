@@ -15,12 +15,17 @@ namespace WindowsFormsApp1
         
         public Form1()
         {
+
+            double accuracy = 0.001;
+            int selection = (int)(9 / Math.Pow(4 * accuracy, 2));
             InitializeComponent();
-            QueuingSystemsTheoretical.InitPointToPlotAverageNumSubscribers(AverageNumberPlot, GeneralPlotCount);
-            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelayAsync, true, GeneralDelaySync, generalAsync);
-            QueuingSystemsTheoretical.InitPointToPlotAverageDelay(AverageDelaySync, false, GeneralDelaySync, generalAsync) ;
-            QueuingSystemsPractical.InitPointToPlotAverageNumSubscribersAsync(10000, counttimes, countMes, GeneralPlotCount, GeneralDelaySync);
-            QueuingSystemsPractical.var2(10000, var2Times, var2Count, GeneralPlotCount, generalAsync);
+            QueuingSystemsTheoretical.InitPointToPlotAverageNumSubscribers(NumSubTheorPlot, GeneralPlotNumSub);
+
+            QueuingSystemsTheoretical.InitPointToPlotAverageDelay( true, HistorySync, HistoryAsync);
+            QueuingSystemsTheoretical.InitPointToPlotAverageDelay( false, HistorySync, HistoryAsync) ;
+
+            QueuingSystemsPractical.InitPointToPlotAverageNumSubscribersAsync(selection, HistoryAsync, NumSubAsyncPlot, GeneralHistory, GeneralPlotNumSub);
+            QueuingSystemsPractical.InitPointToPlotAverageNumSubscribersSync(selection, HistorySync, NumSubSyncPlot, GeneralHistory, GeneralPlotNumSub);
         }
 
         private void AverageDelayAsync_Click(object sender, EventArgs e)
